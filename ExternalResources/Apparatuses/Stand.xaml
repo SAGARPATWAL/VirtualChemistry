@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="ExternalResources.Apparatuses.Stand"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExternalResources.Apparatuses"
+             mc:Ignorable="d" 
+>
+    <Grid>
+        <Path Data="M88.467565,28.884248 L88.112086,90.593832 88.106542,160.3672 88.112222,165.57815 74.075795,165.75754 74.253643,170.95944 93.442321,171.13919 111.83164,171.04931 111.87357,165.30063 96.107437,165.12969 96.10744,50.680078 127.73224,50.763013 C129.59819,54.921061 128.00606,63.243711 133.59644,63.506239 145.05636,64.044404 132.07716,59.923184 131.76224,54.575648 131.46416,49.513955 131.2579,44.949654 131.40549,40.136657 132.92587,35.65522 145.58976,34.983507 134.92932,33.907177 124.26888,32.830848 130.13177,41.66683 127.733,45.546656 L96.018602,45.298437 96.018518,28.525291 z" Margin="73.833,29.5,103.062,4.5" Stretch="Fill" Stroke="#FF474242" Fill="#FF15EAE0"/>
+    </Grid>
+</UserControl>

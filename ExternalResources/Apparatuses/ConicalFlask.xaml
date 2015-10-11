@@ -1,0 +1,18 @@
+﻿<local:ContainerApparatus x:Class="ExternalResources.Apparatuses.ConicalFlask"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExternalResources.Apparatuses"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Path x:Name="Flask" Stroke="#FFC1C1E8" Data="M28.686356,3.6669907 L29.408554,3.6739154 29.534577,3.7156636 C31.279812,4.264292 34.235331,4.625 37.587542,4.6249998 40.604533,4.625 43.3002,4.3328265 45.081438,3.874442 L45.261008,3.8259136 46.600577,3.8387579 46.601599,28.749989 C46.601599,28.749989 57.510612,48.197255 71.682289,65.721387 85.30793,82.570283 61.752138,79.474813 61.752138,79.474813 61.752138,79.474813 35.691576,79.361992 13.69141,79.361992 -8.308766,79.361992 3.8531624,66.145321 3.8531624,66.145321 L28.477887,29.625141 z M37.587542,0.5 C42.951079,0.5 47.299082,1.4234128 47.299082,2.5624999 47.299082,3.0252543 46.581492,3.4524138 45.369746,3.796527 L45.261008,3.8259136 29.408554,3.6739154 29.281971,3.6319811 C28.389777,3.3201376 27.875998,2.9540613 27.875998,2.5624999 27.875998,1.4234128 32.224005,0.5 37.587542,0.5 z" Margin="76.587,95,95.95,48.153" Stretch="Fill" StrokeThickness="3">
+        <Path.Fill>
+            <LinearGradientBrush  EndPoint="0.55,0" StartPoint="0.55,1" >
+                <GradientStop Color="Red" Offset="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:ContainerApparatus}},Path=Volume}">
+                </GradientStop>
+                <GradientStop Color="White" Offset="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:ContainerApparatus}},Path=Volume}"/>
+            </LinearGradientBrush>
+        </Path.Fill>
+    </Path>
+</local:ContainerApparatus>

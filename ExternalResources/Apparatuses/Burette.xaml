@@ -1,0 +1,30 @@
+﻿<local:ContainerApparatus x:Class="ExternalResources.Apparatuses.Burette"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExternalResources.Apparatuses"
+             mc:Ignorable="d" 
+>
+    <Grid>
+        <Path Data="M125.85245,-19.540868 L125.85245,181.83103 130.72727,206.1142 114.14605,206.70646 106.34757,212.03689 113.34721,217.34487 130.85459,217.48969 135.68057,275.12613 136.70808,295.0362 140.68057,295.12613 141.68057,275.12613 146.88534,217.20004 163.67776,217.05522 170.04291,211.11757 175.23171,219.39318 180.52148,211.31931 175.34253,202.80003 170.27865,211.19549 163.9135,206.56122 146.3267,206.1142 152.17648,181.83103 C152.17648,181.83103 153.15144,-18.948598 153.15144,-18.948598"   Stroke="#FF474242">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF147E66" Offset="0.351"/>
+                    <GradientStop Color="White" Offset="0.343"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M125.85245,-19.540868 L125.85245,181.83103 130.72727,206.1142 114.14605,206.70646 106.34757,212.03689 113.34721,217.34487 130.85459,217.48969 135.78372,274.69089 136.70808,295.0362 140.98216,295.06273 141.7039,273.69405 146.88534,217.20004 163.67776,217.05522 170.04291,211.11757 175.78853,219.11477 180.52148,211.59772 175.34253,202.80003 170.27865,211.19549 163.9135,206.56122 146.3267,206.1142 152.17648,181.83103 C152.17648,181.83103 153.15144,-18.948598 153.15144,-18.948598">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.605,0.595" StartPoint="0.285,0.595">
+                    <GradientStop Color="#4CFFFFFF" Offset="0"/>
+                    <GradientStop Offset="0.151"/>
+                    <GradientStop Color="#33FFFFFF" Offset="1"/>
+                    <GradientStop Color="Transparent" Offset="0.87"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+
+    </Grid>
+</local:ContainerApparatus>
