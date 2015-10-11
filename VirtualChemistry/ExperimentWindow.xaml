@@ -1,0 +1,54 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VirtualChemistry.Views"
+        xmlns:ViewModels="clr-namespace:LabLib.ViewModels;assembly=LabLib"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Class="VirtualChemistry.ExperimentWindow"
+        mc:Ignorable="d"
+        x:Name="mainWindow"
+        Title="MainWindow" WindowState="Maximized" ResizeMode="CanResizeWithGrip">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="buttonStyle">
+            <Setter Property="Background" Value="Yellow"/>
+        </Style>
+    </Window.Resources>
+    <Window.DataContext>
+        <ViewModels:ExperimentWindowViewModel/>
+    </Window.DataContext>
+
+    <DockPanel LastChildFill="True" Background="#FF50CFCF" >
+        <Grid DockPanel.Dock="Top" Name="MenuGrid" >
+            <local:Menu/>
+        </Grid>
+        <Grid DockPanel.Dock="Bottom" Panel.ZIndex="10" Name="StatusBarGrid">
+            <local:StatusBar>
+                
+            </local:StatusBar>
+        </Grid>
+
+        <Grid Margin="5" DockPanel.Dock="Left" Background="#FF50CFCF">
+            <local:SideBar DataContext="{Binding ApparatusBarViewModel}">
+                
+            </local:SideBar>
+        </Grid>
+
+        <Grid Margin="5" DockPanel.Dock="Right" Background="#FF50CFCF" Panel.ZIndex="11" Name="PropertiesGrid">
+            <local:Properties>
+                <UserControl.DataContext>
+                    <ViewModels:ApparatusBarViewModel></ViewModels:ApparatusBarViewModel>
+                </UserControl.DataContext>
+            </local:Properties>
+        </Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <local:ExperimentGrid AllowDrop="True" Loaded="ExperimentGrid_Loaded" x:Name="ExperimentGrid" DataContext="{Binding ExperimentGridViewModel}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Drop">
+                    <ei:CallMethodAction  MethodName="DropApparatus" TargetObject="{Binding Mode=OneWay}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </local:ExperimentGrid>
+        </ScrollViewer>
+    </DockPanel>
+</Window>

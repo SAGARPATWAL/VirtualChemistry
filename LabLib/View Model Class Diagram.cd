@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LabLib.ViewModels.AcidBaseExperimentViewModel">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AcidBaseExperimentViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LabLib.ViewModels.ViewModelBaseClass" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelBaseClass.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LabLib.DataAccess.XMLManipulation" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAEAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess\XMLManipulation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LabLib.ExperimentMenu" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExperimentMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LabLib.Initializer" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Initializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LabLib.ExternalClasses.GridProperties" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAQAAAAAgAAAgAAAAAAAAA=</HashCode>
+      <FileName>ExternalClasses\Apparatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LabLib.ExternalClasses.Apparatus" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAJAAAIAAAAAAAEAEIAQAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExternalClasses\Apparatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LabLib.ViewModels.ExperimentWindowViewModel">
+    <Position X="3.25" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYA=</HashCode>
+      <FileName>ViewModels\ExperimentWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LabLib.ViewModels.ApparatusBarViewModel" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>4AABAAAAAQAEgAAAAAAABAAAAAQIAEAAAAAAQAAgAIA=</HashCode>
+      <FileName>ViewModels\ApparatusBarViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LabLib.ViewModels.ExperimentGridViewModel" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAgAAAAAAAQBAgCgAEAAAMIAAAAgIAQAAAAEA=</HashCode>
+      <FileName>ViewModels\ExperimentGridViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExternalResources.Apparatuses.ContainerApparatus">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ExternalResources.Apparatuses.NonContainerApparatus" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

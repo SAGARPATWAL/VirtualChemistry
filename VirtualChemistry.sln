@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Blend for Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualChemistry", "VirtualChemistry\VirtualChemistry.csproj", "{3DE4EA4F-6BAE-4C00-96B9-95E2B5EE0048}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabLib", "LabLib\LabLib.csproj", "{C0F28B4E-5074-4989-AF2A-A5F13F8073F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalResources", "ExternalResources\ExternalResources.csproj", "{D3610C20-F037-41EC-A438-2F66AA0EC461}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DE4EA4F-6BAE-4C00-96B9-95E2B5EE0048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE4EA4F-6BAE-4C00-96B9-95E2B5EE0048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE4EA4F-6BAE-4C00-96B9-95E2B5EE0048}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3DE4EA4F-6BAE-4C00-96B9-95E2B5EE0048}.Debug|x86.Build.0 = Debug|Any CPU
+		{3DE4EA4F-6BAE-4C00-96B9-95E2B5EE0048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE4EA4F-6BAE-4C00-96B9-95E2B5EE0048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE4EA4F-6BAE-4C00-96B9-95E2B5EE0048}.Release|x86.ActiveCfg = Release|Any CPU
+		{3DE4EA4F-6BAE-4C00-96B9-95E2B5EE0048}.Release|x86.Build.0 = Release|Any CPU
+		{C0F28B4E-5074-4989-AF2A-A5F13F8073F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F28B4E-5074-4989-AF2A-A5F13F8073F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F28B4E-5074-4989-AF2A-A5F13F8073F2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C0F28B4E-5074-4989-AF2A-A5F13F8073F2}.Debug|x86.Build.0 = Debug|Any CPU
+		{C0F28B4E-5074-4989-AF2A-A5F13F8073F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F28B4E-5074-4989-AF2A-A5F13F8073F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0F28B4E-5074-4989-AF2A-A5F13F8073F2}.Release|x86.ActiveCfg = Release|Any CPU
+		{C0F28B4E-5074-4989-AF2A-A5F13F8073F2}.Release|x86.Build.0 = Release|Any CPU
+		{D3610C20-F037-41EC-A438-2F66AA0EC461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3610C20-F037-41EC-A438-2F66AA0EC461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3610C20-F037-41EC-A438-2F66AA0EC461}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D3610C20-F037-41EC-A438-2F66AA0EC461}.Debug|x86.Build.0 = Debug|Any CPU
+		{D3610C20-F037-41EC-A438-2F66AA0EC461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3610C20-F037-41EC-A438-2F66AA0EC461}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3610C20-F037-41EC-A438-2F66AA0EC461}.Release|x86.ActiveCfg = Release|Any CPU
+		{D3610C20-F037-41EC-A438-2F66AA0EC461}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

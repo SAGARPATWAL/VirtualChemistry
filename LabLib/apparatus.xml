@@ -1,0 +1,13 @@
+<Apparatuses>
+<SmallContainers>
+	<TestTube/>
+	<Burette/>
+	<Pipette/>
+</SmallContainers>
+<MediumContainners>
+</MediumContainers/>
+<LargeContainers>
+	<RoundBottomFlask/>
+	<Conical Flask/>
+</LargeContainers>
+</Apparatuses>

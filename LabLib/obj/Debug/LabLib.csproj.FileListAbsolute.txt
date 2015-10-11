@@ -1,0 +1,11 @@
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\obj\Debug\LabLib.csprojResolveAssemblyReference.cache
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\bin\Debug\LabLib.dll
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\bin\Debug\LabLib.pdb
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\obj\Debug\LabLib.dll
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\obj\Debug\LabLib.pdb
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\bin\Debug\ExternalResources.dll
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\bin\Debug\ExternalResources.pdb

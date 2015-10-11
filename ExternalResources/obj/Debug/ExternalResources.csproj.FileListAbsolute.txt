@@ -1,0 +1,17 @@
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\bin\Debug\ExternalResources.dll
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\bin\Debug\ExternalResources.pdb
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\ExternalResources.csprojResolveAssemblyReference.cache
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\ExternalResources_MarkupCompile.cache
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\ExternalResources_MarkupCompile.lref
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\ExternalResources.g.resources
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\ExternalResources.Properties.Resources.resources
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\ExternalResources.csproj.GenerateResource.Cache
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\ExternalResources.dll
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\ExternalResources.pdb
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\Apparatuses\ConicalFlask.g.cs
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\Apparatuses\ConicalFlask.baml
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\Apparatuses\Burette.g.cs
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\Apparatuses\Stand.g.cs
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\Apparatuses\Burette.baml
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\ExternalResources\obj\Debug\Apparatuses\Stand.baml

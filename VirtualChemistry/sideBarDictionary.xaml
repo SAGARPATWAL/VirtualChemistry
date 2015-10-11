@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:VirtualChemistry" xmlns:System="clr-namespace:System;assembly=mscorlib">
+    <FontFamily x:Key="sideBarFontFamily">Consolas</FontFamily>
+    <System:Double x:Key="sideBarHeadings">16</System:Double>
+    <System:Double x:Key="contentFontSize">14</System:Double>
+    <Color x:Key="MenuColor">#9F0C7EDB</Color>
+    
+    <Color x:Key="GridHeadingColor">#FF0C7EDB</Color>
+    <Color x:Key="GridContentColor">#FF15B4DF</Color>
+    <Color x:Key="GridBorderColor">#FF062491</Color>
+    <System:Double x:Key="MenuFontSize">14</System:Double>
+
+</ResourceDictionary>

@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="VirtualChemistry.Views.SideBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"              
+             xmlns:other="clr-namespace:VirtualChemistry.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" >
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="myconv"/>
+    </UserControl.Resources>
+    <!--the stack panel contains SideBar formed by Rotating the SideBar By 90 degrees-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Orientation="Horizontal" Height="30">
+            <StackPanel.LayoutTransform>
+                <RotateTransform Angle="90"/>
+            </StackPanel.LayoutTransform>
+            <Button Content="Toolbar"  CommandParameter="Toolbar" Command="{Binding Command}"/>
+            <Button Content="Help"  CommandParameter="Help" Command="{Binding  Command}"/>
+        </StackPanel>
+        <!-- The DockPanel Contains Two Grids one for Each of the button Provided above -->
+      <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <other:ToolBarGrid Grid.Column="0" x:Name="side" Visibility="{Binding Visi,Converter={StaticResource myconv}}"/>
+            <GridSplitter Width="1">
+                <GridSplitter.Background>
+                    <SolidColorBrush Color="{DynamicResource GridBorderColor}"/>
+                </GridSplitter.Background>
+            </GridSplitter>
+            <other:HelpGrid Grid.Column="1" Visibility="{Binding OtherVisible,Converter={StaticResource myconv}}"/>
+    </Grid>
+    </Grid>
+</UserControl>

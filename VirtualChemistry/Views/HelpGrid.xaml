@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="VirtualChemistry.Views.HelpGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VirtualChemistry.Views"
+             mc:Ignorable="d" >
+    <DockPanel >
+        <Border CornerRadius="2" BorderThickness="1">
+            <Border.Background>
+                <SolidColorBrush Color="{DynamicResource GridBorderColor}"/>
+            </Border.Background>
+            <Grid DockPanel.Dock="Left" Height="Auto" 
+                  Margin="3">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock TextAlignment="Center" Padding="3" Text="Help Menu" Grid.Row="0" FontFamily="{DynamicResource sideBarFontFamily}" FontSize="{DynamicResource sideBarHeadings}">
+                        <TextBlock.Background>
+                            <SolidColorBrush Color="{DynamicResource GridHeadingColor}"/>
+                        </TextBlock.Background>
+                    </TextBlock>
+                    <TextBlock TextAlignment="Center" Padding="3" Text="Content Goes Here" Grid.Row="1" FontFamily="{DynamicResource sideBarFontFamily}" FontSize="{DynamicResource contentFontSize}">
+                        <TextBlock.Background>
+                            <SolidColorBrush Color="{DynamicResource GridContentColor}"/>
+                        </TextBlock.Background>
+                    </TextBlock>
+
+                </Grid>
+            </Grid>
+        </Border>
+    </DockPanel>
+
+</UserControl>
