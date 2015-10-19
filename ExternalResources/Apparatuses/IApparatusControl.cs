@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExternalResources.Apparatuses
 {
-    class IApparatusControl
+    public interface IApparatusControl
     {
 
     }

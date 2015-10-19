@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Apparatuses>
-    <Apparatus name="Test Tube" imageSource="Images/testTube.png">
+    <Apparatus name="Test Tube" imageSource="Images/testTube.png" ZIndex="1">
 	    <Experiments>
           <Experiment name="RedoxReaction"></Experiment>
 	    </Experiments>
@@ -8,28 +8,16 @@
     <Apparatus name="Pipette" imageSource="Images/pipette.jpg">
       <Experiments>
         <Experiment name="AcidBaseTitration">
-          <Grid Row="3" Column="2" RowSpan="2" ColumnSpan="1">
+          <Grid Row="3" Column="2" RowSpan="2" ColumnSpan="1" ZIndex="1">
           </Grid>
         </Experiment>
         <Experiment name="RedoxReaction"></Experiment>
-      </Experiments>
-    </Apparatus>
-    <Apparatus name="Burette" imageSource="Images/burette.png">
-      <Experiments>
-        <Experiment name="AcidBaseTitration"></Experiment>
-      </Experiments>
-    </Apparatus>
-    <Apparatus name="Round Bottom Flask" imageSource="Images/RoundBottomFlask.jpg">
-      <Experiments>
-        <Experiment name="RedoxReaction">
-          
-        </Experiment>
       </Experiments>
     </Apparatus>
     <Apparatus name="Conical Flask" imageSource="Images/ConicalFlask.png">
       <Experiments>
         <Experiment name="AcidBaseTitration">
-          <Grid Row="3" Column="2" RowSpan="2" ColumnSpan="1">
+          <Grid Row="3" Column="2" RowSpan="2" ColumnSpan="1" ZIndex="1">
           </Grid>
         </Experiment>
         <Experiment name="RedoxReaction"></Experiment>
@@ -38,7 +26,15 @@
     <Apparatus name="Burette" imageSource="Images/burette.png">
       <Experiments>
         <Experiment name="AcidBaseTitration">
-          <Grid Row="3" Column="2" RowSpan="2" ColumnSpan="1">
+          <Grid Row="0" Column="1" RowSpan="1" ColumnSpan="2" ZIndex="2">
+          </Grid>
+        </Experiment>
+      </Experiments>
+    </Apparatus>
+  <Apparatus name="Stand" imageSource="Images/stand.png">
+      <Experiments>
+        <Experiment name="AcidBaseTitration">
+          <Grid Row="0" Column="0" RowSpan="3" ColumnSpan="2" ZIndex="1">
           </Grid>
         </Experiment>
       </Experiments>

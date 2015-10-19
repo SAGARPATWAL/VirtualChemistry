@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"              
              xmlns:other="clr-namespace:VirtualChemistry.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="300" >
+              >
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="myconv"/>
     </UserControl.Resources>
@@ -28,7 +28,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <other:ToolBarGrid Grid.Column="0" x:Name="side" Visibility="{Binding Visi,Converter={StaticResource myconv}}"/>
+            <other:ToolBarGrid Grid.Column="0" x:Name="side" Visibility="{Binding Visi,Converter={StaticResource myconv}}" DataContext="{Binding}"/>
             <GridSplitter Width="1">
                 <GridSplitter.Background>
                     <SolidColorBrush Color="{DynamicResource GridBorderColor}"/>

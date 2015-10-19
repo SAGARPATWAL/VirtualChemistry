@@ -5,19 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VirtualChemistry.Views"
         xmlns:ViewModels="clr-namespace:LabLib.ViewModels;assembly=LabLib"
+    
+         d:DataContext="{d:DesignInstance {x:Type ViewModels:ExperimentGridViewModel},IsDesignTimeCreatable=True}"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Class="VirtualChemistry.ExperimentWindow"
         mc:Ignorable="d"
         x:Name="mainWindow"
         Title="MainWindow" WindowState="Maximized" ResizeMode="CanResizeWithGrip">
     <Window.Resources>
+        <ViewModels:ExperimentWindowViewModel x:Key="windowDataContext" MessageBus="{StaticResource messageBox}"></ViewModels:ExperimentWindowViewModel>
         <Style TargetType="{x:Type Button}" x:Key="buttonStyle">
             <Setter Property="Background" Value="Yellow"/>
         </Style>
+        <ViewModels:ApparatusBarViewModel x:Key="apparatusBarDataContext" MessageBus="{StaticResource messageBox}"></ViewModels:ApparatusBarViewModel>
     </Window.Resources>
     <Window.DataContext>
-        <ViewModels:ExperimentWindowViewModel/>
+        <ViewModels:ExperimentWindowViewModel></ViewModels:ExperimentWindowViewModel>
     </Window.DataContext>
-
     <DockPanel LastChildFill="True" Background="#FF50CFCF" >
         <Grid DockPanel.Dock="Top" Name="MenuGrid" >
             <local:Menu/>
@@ -29,26 +32,24 @@
         </Grid>
 
         <Grid Margin="5" DockPanel.Dock="Left" Background="#FF50CFCF">
-            <local:SideBar DataContext="{Binding ApparatusBarViewModel}">
+            <local:SideBar x:Name="SideBar" >
                 
             </local:SideBar>
         </Grid>
 
         <Grid Margin="5" DockPanel.Dock="Right" Background="#FF50CFCF" Panel.ZIndex="11" Name="PropertiesGrid">
             <local:Properties>
-                <UserControl.DataContext>
-                    <ViewModels:ApparatusBarViewModel></ViewModels:ApparatusBarViewModel>
-                </UserControl.DataContext>
+
             </local:Properties>
         </Grid>
-        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-        <local:ExperimentGrid AllowDrop="True" Loaded="ExperimentGrid_Loaded" x:Name="ExperimentGrid" DataContext="{Binding ExperimentGridViewModel}" >
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="Drop">
-                    <ei:CallMethodAction  MethodName="DropApparatus" TargetObject="{Binding Mode=OneWay}"  />
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </local:ExperimentGrid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
+            <local:ExperimentGrid AllowDrop="True" x:Name="ExperimentGrid" Width="1275" >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Drop">
+                        <ei:CallMethodAction  MethodName="DropApparatus" TargetObject="{Binding Mode=OneWay}"  />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </local:ExperimentGrid>
         </ScrollViewer>
     </DockPanel>
 </Window>

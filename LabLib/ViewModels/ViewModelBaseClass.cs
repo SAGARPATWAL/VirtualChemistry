@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using LabLib.Services;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LabLib.ViewModels
 {
@@ -18,5 +14,33 @@ namespace LabLib.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+
+        private IMessageBus _messageBus;
+        public IMessageBus MessageBus
+        {
+            get { return _messageBus; }
+            set
+            {
+                if(_messageBus!=null)
+                {
+                    UnSubcscribe();
+                }
+                _messageBus = value;
+                Subscribe();
+                OnPropertyChanged("MessageBus");
+            }
+        }
+
+        
+        protected void PublishMessage<TMessage>(TMessage message)
+        {
+            if (_messageBus != null)
+            {
+                _messageBus.Publish<TMessage>(message);
+            }
+        }
+
+        public virtual void Subscribe() { }
+        public virtual void UnSubcscribe() { }        
     }
 }

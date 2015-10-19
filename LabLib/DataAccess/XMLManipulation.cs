@@ -12,15 +12,44 @@ namespace LabLib.DataAccess
 {
     static class XMLManipulation
     {
-        private const string xPath = @"C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\DataAccess\Apparatus.xml";
+        private const string xApparatusListPath = @"C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\DataAccess\Apparatus.xml";
+        private const string xExperimentListPath = @"C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\LabLib\DataAccess\Experiments.xml";
 
-        
+        public static List<string> GetExperiments()
+        {
+            try
+            {
+                XDocument xDoc = XDocument.Load(xExperimentListPath);
+                var elements = xDoc.Descendants();
+                List<string> list = new List<string>();
+                foreach (var elem in elements)
+                {
+                    if (elem.Name == "Experiment")
+                    {
+                        string experimentName = elem.Attribute("Name").Value.ToString();
+                        list.Add(experimentName);
+                    }
+                }
+
+                return list;
+            }
+            catch (System.IO.FileNotFoundException ex)
+            {
+                MessageBox.Show("Couldn't find file ", ex.FileName);
+                return null;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Can't get Experiment list");
+                return null;
+            }
+        }
 
         public static List<Apparatus> GetApparatuses(string experimentName="")
         {
             try
             {
-                XDocument xDoc = XDocument.Load(xPath);
+                XDocument xDoc = XDocument.Load(xApparatusListPath);
                 var elements = xDoc.Descendants();
                 List<Apparatus> list = new List<Apparatus>();
                 foreach (var elem in elements)
@@ -34,7 +63,7 @@ namespace LabLib.DataAccess
                         {
                             if (exper.Name == "Experiment")
                             {
-                                app.Experiments +=  exper.Attribute("name").ToString() + ",";
+                                app.Experiments +=  exper.Attribute("name").ToString() + "1";
                             }
                             if (exper.Name == "Grid")
                             {
@@ -42,7 +71,8 @@ namespace LabLib.DataAccess
                                 int col = int.Parse(exper.Attribute("Column").Value);
                                 int rowSpan = int.Parse(exper.Attribute("RowSpan").Value);
                                 int colSpan = int.Parse(exper.Attribute("ColumnSpan").Value);
-                                GridProperties gridProps = new GridProperties(row, col, rowSpan, colSpan);
+                                int index = int.Parse(exper.Attribute("ZIndex").Value);
+                                GridProperties gridProps = new GridProperties(row, col, rowSpan, colSpan,index);
                                 app.GridProperties = gridProps;
                             }
                         }
@@ -56,7 +86,7 @@ namespace LabLib.DataAccess
                 MessageBox.Show("System is Unable to locate file : {0}", ex.FileName);
                 return null;
             }
-            catch(System.Exception ex)
+            catch (System.Exception ex)
             {
                 MessageBox.Show("Cannot Access data" + ex.Message);
                 return null;

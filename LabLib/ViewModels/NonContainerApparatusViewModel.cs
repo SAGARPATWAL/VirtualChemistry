@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LabLib.Commands
+namespace LabLib.ViewModels
 {
-    public class ExperimentGridDropCommand
+    public class NonContainerApparatusViewModel : ApparatusViewModel
     {
 
     }

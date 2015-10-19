@@ -63,6 +63,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ExperimentChoiceWindow.xaml.cs">
+      <DependentUpon>ExperimentChoiceWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ExperimentGrid.xaml.cs">
       <DependentUpon>ExperimentGrid.xaml</DependentUpon>
     </Compile>
@@ -75,6 +78,10 @@
     <Compile Include="Views\StatusBar.xaml.cs" />
     <Compile Include="Views\ToolBarGrid.xaml.cs" />
     <Page Include="ApparatusBarDesign.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExperimentChoiceWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,6 +185,10 @@
     <Resource Include="Images\pinHorizontal.gif" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ExternalResources\ExternalResources.csproj">
+      <Project>{d3610c20-f037-41ec-a438-2f66aa0ec461}</Project>
+      <Name>ExternalResources</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LabLib\LabLib.csproj">
       <Project>{c0f28b4e-5074-4989-af2a-a5f13f8073f2}</Project>
       <Name>LabLib</Name>

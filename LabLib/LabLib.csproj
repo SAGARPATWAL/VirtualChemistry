@@ -42,6 +42,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Project Tracker\packages\Blend.Interctivity.WPF.v4.0.1.0.3\lib\net40\System.Windows.Interactivity.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,21 +53,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\ExpandTheSideBarCommand.cs" />
-    <Compile Include="Commands\ExperimentGridDropCommand.cs" />
+    <Compile Include="Commands\ExperimentChoiceWindowCommands\OpenExperimentWindowCommand.cs" />
+    <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Converters\ConverterVisibility.cs" />
     <Compile Include="DataAccess\XMLManipulation.cs" />
     <Compile Include="External Behaviors\ApparatusDragBehavior.cs" />
     <Compile Include="External Behaviors\ExperimentGridDropBehavior.cs" />
+    <Compile Include="ExternalClasses\AllChemicals.cs" />
+    <Compile Include="ExternalClasses\Titration Chemicals\Acid.cs" />
+    <Compile Include="ExternalClasses\Chemical.cs" />
+    <Compile Include="ExternalClasses\Titration Chemicals\Base.cs" />
+    <Compile Include="ExternalClasses\Titration Chemicals\Indicator.cs" />
     <Compile Include="Initializer.cs" />
-    <Compile Include="ViewModels\AcidBaseExperimentViewModel.cs" />
-    <Compile Include="ExternalClasses\AcidBaseTitrationExperiment.cs" />
+    <Compile Include="Services\IMessageBus.cs" />
+    <Compile Include="Services\MessageBus.cs" />
+    <Compile Include="ViewModels\ApparatusViewModel.cs" />
+    <Compile Include="ViewModels\ContainerAppartusViewModel.cs" />
+    <Compile Include="ViewModels\ExperimentWindowViewModels\AcidBaseExperiment\AcidBaseApparatusBarViewModel.cs" />
+    <Compile Include="ViewModels\ExperimentWindowViewModels\AcidBaseExperiment\AcidBaseExperimentGridViewModel.cs" />
+    <Compile Include="ViewModels\ExperimentWindowViewModels\AcidBaseExperiment\AcidBaseExperimentViewModel.cs" />
     <Compile Include="ExternalClasses\AllApparatus.cs" />
     <Compile Include="ExternalClasses\Apparatus.cs" />
     <Compile Include="ExperimentMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\ApparatusBarViewModel.cs" />
-    <Compile Include="ViewModels\ExperimentGridViewModel.cs" />
-    <Compile Include="ViewModels\ExperimentWindowViewModel.cs" />
+    <Compile Include="ViewModels\ExperimentWindowViewModels\AcidBaseExperiment\AcidBasePropertiesViewModel.cs" />
+    <Compile Include="ViewModels\ExperimentWindowViewModels\ApparatusBarViewModel.cs" />
+    <Compile Include="ViewModels\ExperimentWindowViewModels\ExperimentGridViewModel.cs" />
+    <Compile Include="ViewModels\ExperimentWindowViewModels\ExperimentWindowViewModel.cs" />
+    <Compile Include="ViewModels\ExperimentWindowViewModels\PropertiesViewModel.cs" />
+    <Compile Include="ViewModels\NonContainerApparatusViewModel.cs" />
+    <Compile Include="ViewModels\StartWindowViewModels\ExperimentChoiceViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBaseClass.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,13 +92,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="apparatus.xml" />
     <Content Include="DataAccess\Apparatus.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="DataAccess\Experiments.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="View Model Class Diagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commands\ExperimentWindowCommands\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

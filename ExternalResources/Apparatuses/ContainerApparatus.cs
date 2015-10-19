@@ -9,7 +9,7 @@ using System.Windows.Controls;
 
 namespace ExternalResources.Apparatuses
 {
-    public class ContainerApparatus : UserControl
+    public class ContainerApparatus : UserControl,IApparatusControl
     {
         public ContainerApparatus()
         {

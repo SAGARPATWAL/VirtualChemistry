@@ -2,13 +2,15 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:VirtualChemistry"
+            xmlns:services="clr-namespace:LabLib.Services;assembly=LabLib"
              StartupUri="ExperimentWindow.xaml">
     <Application.Resources>
+        
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="sideBarDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
+            <services:MessageBus x:Key="messageBox"></services:MessageBus>    
             <ControlTemplate x:Key="SideBarButtons" TargetType="{x:Type Button}">
                 <Grid Margin="0">
                     <Grid.RowDefinitions>

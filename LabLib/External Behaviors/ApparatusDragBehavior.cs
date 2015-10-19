@@ -9,18 +9,15 @@ namespace LabLib.External_Behaviors
     public class ApparatusDragBehavior : Behavior<UIElement>
     {
 
-
-
         protected override void OnAttached()
         {
-
             base.OnAttached();
             this.AssociatedObject.PreviewMouseLeftButtonDown += AssociatedObject_MouseLeftButtonDown;
         }
 
         private void AssociatedObject_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Debug.WriteLine("Fress");
+            
             StackPanel sp = FindAncestor<StackPanel>((DependencyObject)e.OriginalSource);
             ListViewItem listItem = FindAncestor<ListViewItem>((DependencyObject)e.OriginalSource);
             

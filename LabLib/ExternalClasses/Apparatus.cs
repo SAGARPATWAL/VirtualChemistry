@@ -16,12 +16,14 @@ namespace LabLib.ExternalClasses
 
         public int RowSpan;
 
-        public GridProperties(int row, int col, int rowSpan, int columnSpan)
+        public int ZIndex;
+        public GridProperties(int row, int col, int rowSpan, int columnSpan,int zindex)
         {
             this.Row = row;
             this.Column = col;
             this.RowSpan = rowSpan;
             this.ColumnSpan = columnSpan;
+            this.ZIndex = zindex;
         }
     }
 

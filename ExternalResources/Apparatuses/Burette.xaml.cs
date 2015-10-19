@@ -23,6 +23,7 @@ namespace ExternalResources.Apparatuses
         public Burette()
         {
             InitializeComponent();
+            
         }
     }
 }

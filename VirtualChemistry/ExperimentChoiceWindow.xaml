@@ -1,0 +1,19 @@
+﻿<Window x:Class="VirtualChemistry.ExperimentChoiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VirtualChemistry"
+        xmlns:viewModel="LabLib.ViewModels.StartWindowViewModels;assembly=LabLib"
+        mc:Ignorable="d"
+        Title="ExperimentChoiceWindow" Height="300" Width="300">
+    
+    <DockPanel>
+        <TextBlock DockPanel.Dock="Top" Text="Choose from the following Experiments" TextWrapping="Wrap" TextAlignment="Center"  Background="DarkOrange" Foreground="White" FontSize="20" FontFamily="Capture it" >
+        </TextBlock>
+        <ListView ItemsSource="{Binding ExperimentList}" SelectedItem="{Binding SelectedExperiment}">
+            
+        </ListView>
+        <Button Command="{Binding OpenExperimentWindowCommand}">Open</Button>
+    </DockPanel>
+</Window>

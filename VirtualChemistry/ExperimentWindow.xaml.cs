@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LabLib.ViewModels;
+using LabLib.Services;
+using LabLib.ViewModels.AcidBaseExperiment;
 
 namespace VirtualChemistry
 {
@@ -23,11 +26,25 @@ namespace VirtualChemistry
         public ExperimentWindow()
         {
             InitializeComponent();
-        }
-
-        private void ExperimentGrid_Loaded(object sender, RoutedEventArgs e)
-        {
-
+            string experimentName="AcidBaseTitration";
+            ExperimentWindowViewModel vm;
+            if (experimentName == "AcidBaseTitration")
+            {
+                vm = new AcidBaseExperimentViewModel();
+            }
+            else
+            {
+                vm = new ExperimentWindowViewModel();
+            }
+            MessageBus messageBus = new MessageBus();
+            vm.MessageBus = messageBus;
+            this.DataContext = vm;
+            vm.ExperimentGridViewModel.MessageBus = messageBus;
+            vm.ApparatusBarViewModel.MessageBus = messageBus;
+            vm.PropertiesViewModel.MessageBus = messageBus;
+            ExperimentGrid.DataContext = vm.ExperimentGridViewModel;
+            SideBar.DataContext = vm.ApparatusBarViewModel;
+            PropertiesGrid.DataContext = vm.PropertiesViewModel;
         }
     }
 }

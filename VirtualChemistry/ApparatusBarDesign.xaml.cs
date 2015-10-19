@@ -22,7 +22,7 @@ namespace VirtualChemistry.Views
     {
         public ApparatusBarDesign()
         {
-            InitializeComponent();   
+            InitializeComponent();
         }
     }
 }

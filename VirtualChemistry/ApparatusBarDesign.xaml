@@ -4,15 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:VirtualChemistry.Views"
-             xmlns:view="clr-namespace:LabLib.ViewModels;assembly=LabLib" 
+             xmlns:view="clr-namespace:LabLib.ViewModels;assembly=LabLib"
              xmlns:behave="clr-namespace:LabLib.External_Behaviors;assembly=LabLib"
              xmlns:Library="clr-namespace:LabLib;assembly=LabLib"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Class="VirtualChemistry.Views.ApparatusBarDesign"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
-    <UserControl.DataContext>
-        <view:AcidBaseExperimentViewModel/>
-    </UserControl.DataContext>
+              d:DataContext="{d:DesignInstance {x:Type view:ApparatusBarViewModel},IsDesignTimeCreatable=True}"
+    >
+    
     <DockPanel LastChildFill="True">
         <DockPanel DockPanel.Dock="Top" Background="PaleGoldenrod" MinHeight="15">
             <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Center" Text="Appartus Bar" Foreground="Black" FontSize="10"/>
@@ -23,29 +22,30 @@
         <ScrollViewer DockPanel.Dock="Bottom" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <StackPanel DockPanel.Dock="Top" >
                 <Border BorderBrush="Black" BorderThickness="2">
-                <ListView ItemsSource="{Binding  Apparatus.AcidBaseApparatus}">
-                    <ListView.ItemContainerStyle>
+                    <ListView ItemsSource="{Binding ExperimentApparatus}" SelectedItem="{Binding SelectedApparatus}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                                <ei:CallMethodAction MethodName="DragMethod" TargetObject="{Binding}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <Setter Property="Tag" Value="{Binding AppratusName}"></Setter>
                         </Style>
                     </ListView.ItemContainerStyle>
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <Border BorderBrush="Black" BorderThickness="2">
-                            <StackPanel Tag="{Binding AppratusName}">
-                                    <StackPanel Background="Red">
-                                <TextBlock  Text="{Binding AppratusName}" Background="Azure">
-                                </TextBlock>
+                        
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="Black" BorderThickness="2">
+                                    <StackPanel Tag="{Binding AppratusName}" HorizontalAlignment="Stretch">
+                                        <TextBlock  Text="{Binding AppratusName}" Background="Azure" HorizontalAlignment="Stretch">
+                                        </TextBlock>
+                                        <!--<Image HorizontalAlignment="Center" Source="{Binding ImageSource}"/>-->
                                     </StackPanel>
-                                    <Image HorizontalAlignment="Center" MaxHeight="50" Source="{Binding ImageSource}"/>
-                            </StackPanel>
-                            </Border>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                    <i:Interaction.Behaviors>
-                        <behave:ApparatusDragBehavior></behave:ApparatusDragBehavior>
-                    </i:Interaction.Behaviors>
-                </ListView>
+                                </Border>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </Border>
             </StackPanel>
         </ScrollViewer>

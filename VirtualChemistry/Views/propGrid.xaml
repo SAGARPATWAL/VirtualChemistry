@@ -3,34 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:externalApparatus="clr-namespace:ExternalResources.Apparatuses;assembly=ExternalResources"
              xmlns:local="clr-namespace:VirtualChemistry.Views"
              >
-    <DockPanel Background="#FF720808">
+    <UserControl.Resources>
+        <DataTemplate DataType="externalApparatus:ContainerApparatus">
+            <StackPanel Orientation="Horizontal">
+                <Label>Chemical</Label>
+                <ComboBox ItemsSource="{Binding ChemicalList}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ChemicalName}"></TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
         <Border CornerRadius="2" BorderThickness="1">
-            <Border.Background>
+            <Border.BorderBrush>
                 <SolidColorBrush Color="{DynamicResource GridBorderColor}"/>
-            </Border.Background>
-            <Grid DockPanel.Dock="Left" Height="Auto" Width="200"  
-                  Background="#FF272424"
-                  Margin="3"
-                  >
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="30"/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Padding="3" Text="Properties Window" Grid.Row="0" FontFamily="{DynamicResource sideBarFontFamily}" FontSize="{DynamicResource sideBarHeadings}">
-                        <TextBlock.Background>
-                            <SolidColorBrush Color="{DynamicResource GridHeadingColor}"/>
-                        </TextBlock.Background>
-                    </TextBlock>
-                    <TextBlock Text="this is a good window" TextWrapping="Wrap" Grid.Row="1" FontFamily="{DynamicResource sideBarFontFamily}" FontSize="{DynamicResource contentFontSize}" >
-                        <TextBlock.Background>
-                            <SolidColorBrush Color="{DynamicResource GridContentColor}"/>
-                        </TextBlock.Background>
-                    </TextBlock>
-                </Grid>
-            </Grid>
-        </Border>
-    </DockPanel>
+            </Border.BorderBrush>
+        <DockPanel Background="AliceBlue">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                <Label>Name : </Label>
+                <Label Content="{Binding SelectedApparatus}"></Label>
+            </StackPanel>
+            
+            
+        </DockPanel>
+    </Border>
+    
 </UserControl>

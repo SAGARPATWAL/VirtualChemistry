@@ -46,3 +46,5 @@ C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\VirtualCh
 C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\VirtualChemistry\bin\Debug\System.Windows.Interactivity.xml
 C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\VirtualChemistry\bin\Debug\ExternalResources.dll
 C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\VirtualChemistry\bin\Debug\ExternalResources.pdb
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\VirtualChemistry\obj\Debug\ExperimentChoiceWindow.g.cs
+C:\Users\Manish\Documents\Visual Studio 2015\Projects\VirtualChemistry\VirtualChemistry\obj\Debug\ExperimentChoiceWindow.baml
