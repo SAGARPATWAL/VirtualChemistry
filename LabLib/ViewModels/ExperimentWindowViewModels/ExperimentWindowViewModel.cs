@@ -18,7 +18,13 @@
         public string ExperimentName
         {
             get { return _experimentName; }
+            set
+            {
+                _experimentName = value;
+                OnPropertyChanged("ExperimentName");
+            }
         }
+    
         public ExperimentGridViewModel ExperimentGridViewModel
         {
             get

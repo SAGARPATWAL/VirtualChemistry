@@ -48,18 +48,14 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apparatuses\Burette.xaml.cs">
-      <DependentUpon>Burette.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Apparatuses\ConicalFlask.xaml.cs">
-      <DependentUpon>ConicalFlask.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Apparatuses\ContainerApparatus.cs" />
-    <Compile Include="Apparatuses\IApparatusControl.cs" />
-    <Compile Include="Apparatuses\NonContainerApparatus.cs" />
-    <Compile Include="Apparatuses\Stand.xaml.cs">
-      <DependentUpon>Stand.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="DataAccess\XMLManipulation.cs" />
+    <Compile Include="ExternalClasses\AllApparatus.cs" />
+    <Compile Include="ExternalClasses\AllChemicals.cs" />
+    <Compile Include="ExternalClasses\Apparatus.cs" />
+    <Compile Include="ExternalClasses\PropertySelector.cs" />
+    <Compile Include="ExternalClasses\Titration Chemicals\Acid.cs" />
+    <Compile Include="ExternalClasses\Titration Chemicals\Base.cs" />
+    <Compile Include="ExternalClasses\Titration Chemicals\Indicator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -84,18 +80,13 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Apparatuses\Burette.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Apparatuses\ConicalFlask.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Apparatuses\Stand.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Resource Include="DataAccess\AcidBaseTitrationHelp.xml" />
+    <Resource Include="DataAccess\Apparatus.xml" />
+    <Resource Include="DataAccess\Chemicals.xml" />
+    <Resource Include="DataAccess\Experiments.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Apparatuses\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

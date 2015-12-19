@@ -7,8 +7,9 @@ using System.Windows.Controls;
 
 namespace ExternalResources.Apparatuses
 {
-    public class NonContainerApparatus : UserControl
+    public class NonContainerApparatus : UserControl,IApparatusControl
     {
+
 
     }
 }

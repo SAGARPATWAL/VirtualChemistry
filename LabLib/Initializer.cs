@@ -8,6 +8,6 @@ namespace LabLib
 {
     public class Initializer
     {
-
+        
     }
 }

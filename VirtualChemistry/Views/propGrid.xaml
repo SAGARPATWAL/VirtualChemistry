@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:property="clr-namespace:LabLib.ViewModels;assembly=LabLib"
              xmlns:externalApparatus="clr-namespace:ExternalResources.Apparatuses;assembly=ExternalResources"
              xmlns:local="clr-namespace:VirtualChemistry.Views"
              >
     <UserControl.Resources>
-        <DataTemplate DataType="externalApparatus:ContainerApparatus">
+        <DataTemplate DataType="property:ContainerAppartusViewModel">
             <StackPanel Orientation="Horizontal">
                 <Label>Chemical</Label>
                 <ComboBox ItemsSource="{Binding ChemicalList}">
@@ -17,7 +18,6 @@
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
-                
             </StackPanel>
         </DataTemplate>
     </UserControl.Resources>
@@ -26,12 +26,29 @@
                 <SolidColorBrush Color="{DynamicResource GridBorderColor}"/>
             </Border.BorderBrush>
         <DockPanel Background="AliceBlue">
-            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
-                <Label>Name : </Label>
-                <Label Content="{Binding SelectedApparatus}"></Label>
-            </StackPanel>
             
-            
+            <ContentControl DataContext="{Binding ApparatusViewModel}">
+                <ContentControl.Template>
+                    <ControlTemplate>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Name : </Label>
+                                <TextBlock Text="{Binding ApparatusName}"></TextBlock>
+                            </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label>Chemical</Label>
+                            <ComboBox ItemsSource="{Binding ChemicalList}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding ChemicalName}"></TextBlock>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                        </StackPanel>
+                        </StackPanel>
+                    </ControlTemplate>
+                </ContentControl.Template>
+            </ContentControl>
         </DockPanel>
     </Border>
     

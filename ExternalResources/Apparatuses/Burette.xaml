@@ -5,17 +5,43 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ExternalResources.Apparatuses"
              mc:Ignorable="d" 
+                          Volume="{Binding VolumeOfApparatus}"
+                          Chemical="{Binding ChemicalPresent}"
 >
-    <Grid>
-        <Path Data="M125.85245,-19.540868 L125.85245,181.83103 130.72727,206.1142 114.14605,206.70646 106.34757,212.03689 113.34721,217.34487 130.85459,217.48969 135.68057,275.12613 136.70808,295.0362 140.68057,295.12613 141.68057,275.12613 146.88534,217.20004 163.67776,217.05522 170.04291,211.11757 175.23171,219.39318 180.52148,211.31931 175.34253,202.80003 170.27865,211.19549 163.9135,206.56122 146.3267,206.1142 152.17648,181.83103 C152.17648,181.83103 153.15144,-18.948598 153.15144,-18.948598"   Stroke="#FF474242">
+    <local:ContainerApparatus.Resources>
+        <local:StringToColorConverter x:Key="myColorConverter"/>
+    </local:ContainerApparatus.Resources>
+
+    <local:ContainerApparatus.ToolTip >
+        <ToolTip Width="200" DataContext="{Binding Path=PlacementTarget,
+            RelativeSource={x:Static RelativeSource.Self}}">
+            <StackPanel>
+                <TextBlock Text="Burette"/>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Width="70">Volume :</TextBlock>
+                    <TextBlock Text="{Binding Volume}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Width="70">Chemical :</TextBlock>
+                    <TextBlock Text="{Binding Chemical}"/>
+                </StackPanel>
+                <TextBlock Text="Click To Edit Properties"/>
+            </StackPanel>
+        </ToolTip>
+
+    </local:ContainerApparatus.ToolTip>
+
+
+    <Grid Height="339.564" Width="223.645">
+        <Path Data="M126.35587,-18.84061 L125.85245,181.83103 130.72727,206.1142 114.14605,206.70646 106.34757,212.03689 113.34721,217.34487 130.85459,217.48969 135.68057,275.12613 136.70808,295.0362 140.68057,295.12613 141.68057,275.12613 146.88534,217.20004 163.67776,217.05522 170.04291,211.11757 175.23171,219.39318 180.52148,211.31931 175.34253,202.80003 170.27865,211.19549 163.9135,206.56122 146.3267,206.1142 152.17648,181.83103 C152.17648,181.83103 152.99529,-18.094762 152.99529,-18.094762"   Stroke="#FF474242" Margin="60.661,10.655,101.8,33.928" Stretch="Fill">
             <Path.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF147E66" Offset="0.351"/>
-                    <GradientStop Color="White" Offset="0.343"/>
+                <LinearGradientBrush EndPoint="0.55,0" StartPoint="0.55,1">
+                    <GradientStop Color="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:ContainerApparatus}},Path=ChemicalName,Converter={StaticResource myColorConverter}}"  Offset="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:ContainerApparatus}},Path=Volume}"/>
+                    <GradientStop Color="White"   Offset="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:ContainerApparatus}},Path=Volume}"/>
                 </LinearGradientBrush>
             </Path.Fill>
         </Path>
-        <Path Data="M125.85245,-19.540868 L125.85245,181.83103 130.72727,206.1142 114.14605,206.70646 106.34757,212.03689 113.34721,217.34487 130.85459,217.48969 135.78372,274.69089 136.70808,295.0362 140.98216,295.06273 141.7039,273.69405 146.88534,217.20004 163.67776,217.05522 170.04291,211.11757 175.78853,219.11477 180.52148,211.59772 175.34253,202.80003 170.27865,211.19549 163.9135,206.56122 146.3267,206.1142 152.17648,181.83103 C152.17648,181.83103 153.15144,-18.948598 153.15144,-18.948598">
+        <Path Data="M125.85245,-19.540868 L125.85245,181.83103 130.72727,206.1142 114.14605,206.70646 106.34757,212.03689 113.34721,217.34487 130.85459,217.48969 135.78372,274.69089 136.70808,295.0362 140.98216,295.06273 141.7039,273.69405 146.88534,217.20004 163.67776,217.05522 170.04291,211.11757 175.78853,219.11477 180.52148,211.59772 175.34253,202.80003 170.27865,211.19549 163.9135,206.56122 146.3267,206.1142 152.17648,181.83103 C152.17648,181.83103 153.15144,-18.948598 153.15144,-18.948598" Margin="60.661,10,101.8,33.928" Stretch="Fill">
             <Path.Fill>
                 <LinearGradientBrush EndPoint="0.605,0.595" StartPoint="0.285,0.595">
                     <GradientStop Color="#4CFFFFFF" Offset="0"/>
@@ -25,6 +51,7 @@
                 </LinearGradientBrush>
             </Path.Fill>
         </Path>
+        <Ellipse HorizontalAlignment="Left" Height="6.079" Margin="76.698,10.655,0,0" Stroke="#FF474242" VerticalAlignment="Top" Width="22.313"/>
 
     </Grid>
 </local:ContainerApparatus>

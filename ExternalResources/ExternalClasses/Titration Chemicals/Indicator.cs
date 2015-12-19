@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
-
+using ExternalResources.Apparatuses;
 namespace LabLib.ExternalClasses.Titration_Chemicals
 {
     public class Indicator : Chemical
@@ -17,7 +17,11 @@ namespace LabLib.ExternalClasses.Titration_Chemicals
             set { endColor = value; }
         }
 
-        public Indicator()
-        { }
+        public Indicator(string name,Color color)
+        {
+            this.ChemicalName = name;
+            this.endColor = color;
+        }
+        public Indicator() { }
     }
 }

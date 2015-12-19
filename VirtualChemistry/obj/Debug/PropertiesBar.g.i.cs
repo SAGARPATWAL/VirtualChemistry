@@ -9,6 +9,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using LabLib.ViewModels;
+using Microsoft.Expression.Interactivity.Core;
+using Microsoft.Expression.Interactivity.Input;
+using Microsoft.Expression.Interactivity.Layout;
+using Microsoft.Expression.Interactivity.Media;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -19,6 +24,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Ink;
 using System.Windows.Input;
+using System.Windows.Interactivity;
 using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
@@ -30,6 +36,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
 using VirtualChemistry;
+using VirtualChemistry.Views;
 
 
 namespace VirtualChemistry {

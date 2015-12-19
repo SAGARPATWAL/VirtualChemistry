@@ -168,15 +168,15 @@ namespace LabLib.ViewModels
         #region Dragging
         public void DragMethod(object sender,MouseEventArgs e)
         {
-            StackPanel sp = FindAncestor<StackPanel>((DependencyObject)e.OriginalSource);
+            //StackPanel sp = FindAncestor<StackPanel>((DependencyObject)e.OriginalSource);
             ListViewItem listItem = FindAncestor<ListViewItem>((DependencyObject)e.OriginalSource);
             
-            if (sp != null)
+            if (listItem != null)
             {
                 try
                 {
 
-                    DataObject obj = new DataObject("ControlFormat", sp.Tag.ToString());
+                    DataObject obj = new DataObject("ControlFormat", listItem.Tag.ToString());
                     DragDrop.DoDragDrop(listItem, obj, DragDropEffects.Move);
                     PublishMessage<Apparatus>(SelectedApparatus);
                 }

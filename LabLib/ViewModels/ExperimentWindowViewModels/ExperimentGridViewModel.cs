@@ -11,6 +11,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace LabLib.ViewModels
 {
@@ -130,11 +131,13 @@ namespace LabLib.ViewModels
 
         public void DropApparatus(object sender, DragEventArgs e)
         {
-            Grid grid = sender as Grid;
+            Canvas canvas = sender as Canvas;
+            
             if (e.Data.GetDataPresent("ControlFormat"))
             {
                 string apparatusName = e.Data.GetData("ControlFormat").ToString();
-                UIElement apparatusControl = GetApparatusFromStringData(apparatusName);
+                UserControl apparatusControl = GetApparatusFromStringData(apparatusName);
+
                 try
                 {
                     if (this.ApparatusAppplied.Any<Apparatus>((i) => (i.AppratusName == DroppedApparatus.AppratusName)))
@@ -145,7 +148,7 @@ namespace LabLib.ViewModels
                     {
                         if (apparatusControl != null)
                         {
-                            SetApparatusPosition(apparatusControl, grid);
+                            SetApparatusPosition(apparatusControl,canvas);
                             if (apparatusControl is ContainerApparatus)
                             {
                                 SetApparatusBinding((ContainerApparatus)apparatusControl);
@@ -167,10 +170,10 @@ namespace LabLib.ViewModels
 
         private void FillApparatusApplied(string apparatusName)
         {
-                            
+            
         }
 
-        private UIElement GetApparatusFromStringData(string apparatusName)
+        private UserControl GetApparatusFromStringData(string apparatusName)
         {
             switch (apparatusName)
             {
@@ -183,20 +186,19 @@ namespace LabLib.ViewModels
 
         private void SetApparatusBinding(ContainerApparatus apparatus)
         {
-            apparatus.DataContext = new ContainerAppartusViewModel();
-            Binding bind = new Binding();
+            apparatus.DataContext = new ContainerAppartusViewModel() { VolumeOfApparatus = apparatus.Volume,ChemicalPresent=apparatus.Chemical };
+            
+            /*Binding bind = new Binding();
             bind.Path = new PropertyPath("Volume");
-            apparatus.SetBinding(ContainerApparatus.VolumeProperty, bind);
+            apparatus.SetBinding(ContainerApparatus.VolumeProperty, bind);*/
         }
 
-        private void SetApparatusPosition(UIElement apparatusControl,Grid grid)
+        protected virtual void SetApparatusPosition(UIElement apparatusControl,Canvas canvas)
         {
-            grid.Children.Add(apparatusControl);
-            Grid.SetRow(apparatusControl, DroppedApparatus.GridProperties.Row);
-            Grid.SetColumn(apparatusControl, DroppedApparatus.GridProperties.Column);
-            Grid.SetColumnSpan(apparatusControl, DroppedApparatus.GridProperties.ColumnSpan);
-            Grid.SetRowSpan(apparatusControl, DroppedApparatus.GridProperties.RowSpan);
-            Panel.SetZIndex(apparatusControl, DroppedApparatus.GridProperties.ZIndex);
+            canvas.Children.Add(apparatusControl);
+            Canvas.SetTop(apparatusControl,DroppedApparatus.CanvasProperties.Top);
+            Canvas.SetLeft(apparatusControl, DroppedApparatus.CanvasProperties.Left);
+            Panel.SetZIndex(apparatusControl, DroppedApparatus.CanvasProperties.Zindex);
         }
 
         public ExperimentGridViewModel()

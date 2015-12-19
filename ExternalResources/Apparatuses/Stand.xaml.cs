@@ -18,7 +18,7 @@ namespace ExternalResources.Apparatuses
     /// <summary>
     /// Interaction logic for Stand.xaml
     /// </summary>
-    public partial class Stand : UserControl
+    public partial class Stand : NonContainerApparatus
     {
         public Stand()
         {

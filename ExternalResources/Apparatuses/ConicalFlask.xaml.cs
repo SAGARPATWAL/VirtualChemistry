@@ -1,6 +1,10 @@
-﻿using System;
+﻿using LabLib.DataAccess;
+using LabLib.ExternalClasses;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +27,7 @@ namespace ExternalResources.Apparatuses
         public ConicalFlask()
         {
             InitializeComponent();
+            this.Chemicals = new ObservableCollection<Chemical>(AllChemicals.AllChemials);
         }
     }
 }

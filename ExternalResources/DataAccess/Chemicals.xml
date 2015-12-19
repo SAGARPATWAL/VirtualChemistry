@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Chemicals>
+  <Acids>
+    <Acid Name="HCL" Basisity="1" Molarity="10" Normality="10" />
+    <Acid Name="H2SO4" Basisity="2" Molarity="20" Normality="50" />
+    <Acid Name="HNO3" Basisity="3" Molarity="50" Normality="40" />
+  </Acids>
+  <Bases>
+    <Base Name="NaOH" Acidity="1" Molarity="10" Normality="20" />
+    <Base Name="Ca(OH)2" Acidity="1" Molarity="20" Normality="40" />
+    <Base Name="ds" Acidity="2" Molarity="20" Normality="50" />
+  </Bases>
+  <Indicators>
+    <Indicator Name="Phenolphethalin" Color="Pink" />
+    <Indicator Name="Methyl Orange" Color="Orange" />
+  </Indicators>
+</Chemicals>
+

@@ -8,8 +8,8 @@
     <Apparatus name="Pipette" imageSource="Images/pipette.jpg">
       <Experiments>
         <Experiment name="AcidBaseTitration">
-          <Grid Row="3" Column="2" RowSpan="2" ColumnSpan="1" ZIndex="1">
-          </Grid>
+          <Canvas Top="40" Left="30" ZIndex="1">
+          </Canvas>
         </Experiment>
         <Experiment name="RedoxReaction"></Experiment>
       </Experiments>
@@ -17,8 +17,8 @@
     <Apparatus name="Conical Flask" imageSource="Images/ConicalFlask.png">
       <Experiments>
         <Experiment name="AcidBaseTitration">
-          <Grid Row="3" Column="2" RowSpan="2" ColumnSpan="1" ZIndex="1">
-          </Grid>
+          <Canvas Top="410" Left="300" ZIndex="1">
+          </Canvas>
         </Experiment>
         <Experiment name="RedoxReaction"></Experiment>
       </Experiments>
@@ -26,16 +26,16 @@
     <Apparatus name="Burette" imageSource="Images/burette.png">
       <Experiments>
         <Experiment name="AcidBaseTitration">
-          <Grid Row="0" Column="1" RowSpan="1" ColumnSpan="2" ZIndex="2">
-          </Grid>
+          <Canvas Top="100" Left="300" ZIndex="1">
+          </Canvas>
         </Experiment>
       </Experiments>
     </Apparatus>
   <Apparatus name="Stand" imageSource="Images/stand.png">
       <Experiments>
         <Experiment name="AcidBaseTitration">
-          <Grid Row="0" Column="0" RowSpan="3" ColumnSpan="2" ZIndex="1">
-          </Grid>
+          <Canvas Top="100" Left="30" ZIndex="2">
+          </Canvas>
         </Experiment>
       </Experiments>
     </Apparatus>

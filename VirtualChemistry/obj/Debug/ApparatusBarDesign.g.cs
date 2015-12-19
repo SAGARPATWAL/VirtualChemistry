@@ -11,6 +11,7 @@
 
 using LabLib;
 using LabLib.External_Behaviors;
+using LabLib.Services;
 using LabLib.ViewModels;
 using Microsoft.Expression.Interactivity.Core;
 using Microsoft.Expression.Interactivity.Input;
@@ -37,6 +38,7 @@ using System.Windows.Media.TextFormatting;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
+using VirtualChemistry;
 using VirtualChemistry.Views;
 
 

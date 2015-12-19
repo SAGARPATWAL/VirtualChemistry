@@ -27,12 +27,19 @@ namespace LabLib.ExternalClasses
         }
     }
 
+    public class CanvasProperties
+    {
+        public int Top;
+        public int Left;
+        public int Zindex;
+    }
+
     public class Apparatus 
     {
         private string _appratusName;
         private string _imageSource;
         private string _experiments;
-        private GridProperties gridProps;
+        private CanvasProperties canvasProps;
 
         public Apparatus()
         {
@@ -47,12 +54,12 @@ namespace LabLib.ExternalClasses
             Experiments = exp;
         }
 
-        public GridProperties GridProperties
+        public CanvasProperties CanvasProperties
         {
-            get { return gridProps; }
+            get { return canvasProps; }
             set
             {
-                gridProps = value;
+                canvasProps = value;
             }
         }
         

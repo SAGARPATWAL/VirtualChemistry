@@ -36,19 +36,14 @@ namespace LabLib.Commands.ExperimentChoiceWindowCommands
 
         bool ICommand.CanExecute(object parameter)
         {
-            if(viewModel.SelectedExperiment=="")
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+
+            return true;
+
         }
 
         void ICommand.Execute(object parameter)
         {
-             
+            viewModel.ExecuteAction();
         }
 
 
@@ -56,5 +51,6 @@ namespace LabLib.Commands.ExperimentChoiceWindowCommands
         {
             this.viewModel = viewModel;
         }
+
     }
 }
